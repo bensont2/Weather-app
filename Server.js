@@ -29,6 +29,7 @@ app.get('/api/weather', async (req, res) => {
 
 
 
+
 app.listen(process.env.PORT || 3000, () => console.log('Avialble on http://localhost:3000'));
 
 
