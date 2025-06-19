@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 require('dotenv').config();
 const app = express();
-const PORT = process.env.PORT || 4000;
+
 
 // Serve static files from the current directory
 app.use('/', express.static(path.join(__dirname)));
@@ -29,9 +29,8 @@ app.get('/api/weather', async (req, res) => {
 
 
 
-app.listen(PORT, () => {
-  console.log(`Example app listening on port ${port}`)
-})
+
+app.listen(process.env.PORT || 3000, () => console.log('Avialble on http://localhost:3000'));
 
 
 
